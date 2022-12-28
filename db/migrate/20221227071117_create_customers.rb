@@ -1,12 +1,11 @@
-class CreateCustomers < ActiveRecord::Migration[6.1]
+class CreateCustomers < ActiveRecord::Migration[7.0]
   def change
     create_table :customers do |t|
-      t.integer :id
       t.string  :name
       t.string  :email
-      t.integer :admin_id
-      t.string  :password
-      t.timestamps
+      t.string  :password_digest
+   
+      t.timestamps 
     end
   end
 end
