@@ -13,7 +13,7 @@ class BusRoutesController < ApplicationController
       end    
       def update
         route=Route.find_by(id:params[:id])
-        route.update(Route_params)
+        route.update(route_params)
         render json:route,status: :updated        
       end    
       def destroy
